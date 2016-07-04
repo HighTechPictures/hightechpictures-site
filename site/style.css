@@ -305,16 +305,7 @@ p {
 		width: calc(30% - 10%);
 	}
 }
-/* FROM HOW HERE IS
-CODE FOR FEATURED WORK */
-/* THINGS TO ADDRESS
-Fixed > Border-Radius would break when mouse hover.
-Fixed > Hello <h1> element tag animation only show from the half down of the div.
-> Figure-out away to add blur to only to the image when is animating scaling up without bluring the <h1> tag.
-> Add an overlay color when the mouse hover the images without affecting the <h1> tag.
-*/
-/* FROM HERE NOW IS
-CODE FOR FEATURED WORK */
+
 .work-container {
 	background-color: #616161;
 	margin-top: 100px;
