@@ -1,0 +1,548 @@
+/* DROP DOWN MENU */
+/* FROM HOW HERE IS
+CODE FOR MASTHEAD WORK */
+/* FROM HOW HERE IS
+CODE FOR FEATURED TOOLS & SKILLS */
+/* FROM HOW HERE IS
+CODE FOR FEATURED WORK */
+/* THINGS TO ADDRESS
+Fixed > Border-Radius would break when mouse hover.
+Fixed > Hello <h1> element tag animation only show from the half down of the div.
+> Figure-out away to add blur to only to the image when is animating scaling up without bluring the <h1> tag.
+> Add an overlay color when the mouse hover the images without affecting the <h1> tag.
+*/
+/* FROM HERE NOW IS
+CODE FOR FEATURED WORK */
+/* FROM HOW HERE IS
+CODE FOR CONCTACT ME WORK */
+/* FROM HOW HERE IS
+CODE FOR FOOTER WORK */
+/* FROM HOW HERE IS
+CODE FOR COPYRIGHT WORK */
+* {
+	margin: 0px;
+}
+h2 {
+	color: #46474a;
+}
+h3 {
+	color: #46474a;
+}
+p {
+	color: #46474a;
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	line-height: 26px;
+	margin: 20px 0px;
+}
+a {
+	color: #46474a;
+	display: inline-block;
+	font-size: 12px;
+	text-decoration: none;
+	color: #eee;
+	letter-spacing: 1px;
+	padding-right: 8px;
+}
+body {
+	background-color: #eee;
+}
+.main-header {
+	position: absolute;
+	width: 100%;
+	height: 80px;
+	z-index: 1000;
+}
+.logo-container {
+	position: relative;
+	width: calc(100% - 10%);
+	margin: 0 auto;
+	top: 20px;
+}
+#logo {
+	display: inline-block;
+	left: 0px;
+	top: 1px;
+	position: relative;
+	color: #eee;
+}
+.logo-title {
+	position: absolute;
+	display: inline-block;
+	color: white;
+	font-family: 'Futura PT', sans-serif;
+	font-size: 16px;
+	top: -18px;
+	left: 40px;
+}
+header {
+	img {
+		width: 30px;
+		position: absolute;
+		top: 0px;
+		right: 0;
+		display: inline;
+		text-align: right;
+	}
+}
+.dropdown-menu {
+	ul {
+		display: block;
+		position: relative;
+		top: 40px;
+		padding: 0px;
+		background-color: #333;
+		color: white;
+		list-style: none;
+		text-align: center;
+		z-index: 100;
+		border-bottom: 3px solid white;
+		z-index: 1000;
+	}
+	li {
+		font-family: lato;
+		padding: 18px 0px;
+		text-transform: uppercase;
+		cursor: pointer;
+		border-bottom: 1px solid #555;
+	}
+}
+ul {
+	>img {
+		display: none;
+	}
+}
+li {
+	&:hover {
+		background-color: #efc978;
+		color: black;
+	}
+}
+.main-cover {
+	background-size: cover;
+	background-position: 50% 50%;
+	background-image: no-repeat;
+	height: 100vh;
+	width: 100%;
+}
+.video-container {
+	position: absolute;
+	width: 100%;
+	heigth: 100%;
+	min-height: 100%;
+	min-width: 100%;
+	overflow: hidden;
+}
+.inner-video-container {
+	position: absolute;
+	width: auto;
+	height: auto;
+	min-width: 100%;
+	min-height: 100%;
+	right: 50%;
+	transform: translateX(50%);
+	z-index: -100;
+}
+.inner-main-cover {
+	position: relative;
+	letter-spacing: 1px;
+	text-align: center;
+	text-transform: uppercase;
+	top: calc(50% - 10%);
+	width: calc(100% - 40%);
+	height: auto;
+	margin: auto;
+	color: #eee;
+	z-index: 1000;
+}
+.fadeup {
+	position: relative;
+	font-size: 70px;
+	font-family: 'Futura PT', sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	color: #eee;
+	top: 100px;
+	opacity: 0;
+	transition: all .8s ease-in-out;
+	span {
+		color: #efc978;
+	}
+}
+.featured-icon {
+	background-color: #eee;
+	>img {
+		display: block;
+		position: relative;
+		top: -20px;
+		margin: 0 auto;
+	}
+}
+.featured-icon-title {
+	position: relative;
+	margin: 0 auto;
+	width: calc(100% - 20%);
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Futura PT', sans-serif;
+	padding-bottom: 100px;
+	>h2 {
+		font-size: 32px;
+	}
+	>h3 {
+		font-weight: 300;
+		margin-bottom: 60px;
+	}
+}
+.box {
+	>h3 {
+		margin: 20px 0px;
+	}
+	display: inline-block;
+	width: 20%;
+	text-align: center;
+	padding: 10px 20px;
+}
+.work-container {
+	background-color: #616161;
+	margin-top: 100px;
+	h1 {
+		position: relative;
+		width: 100%;
+		margin: 0;
+		top: 48%;
+		color: white;
+		opacity: 0;
+		text-align: center;
+		vertical-align: middle;
+		transition: all .3s ease-in-out;
+	}
+}
+.container-one {
+	width: calc(100% - 10%);
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	opacity: 0;
+	transition: all .8s ease-in-out;
+	top: 100px;
+}
+.one-awesome {
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 10px;
+	border-radius: 8px;
+	transform: scale(1);
+}
+.two-awesome {
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 10px;
+	border-radius: 8px;
+	transform: scale(1);
+}
+.one-awesome.middle {
+	top: -80px;
+	position: relative;
+}
+.one-frame {
+	height: 300px;
+	width: calc(100% - 10%);
+	min-width: 100%;
+	min-height: 100%;
+	background: url(http://media.creativebloq.futurecdn.net/sites/creativebloq.com/files/images/2013/04/alu1.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	cursor: pointer;
+	transition: all .3s ease-in-out;
+	&:hover {
+		transform: scale(1.1);
+		h1 {
+			top: 42%;
+			opacity: 1;
+		}
+	}
+}
+.two-frame {
+	height: 300px;
+	width: calc(100% - 10%);
+	min-width: 100%;
+	min-height: 100%;
+	background: url(http://media.creativebloq.futurecdn.net/sites/creativebloq.com/files/images/2013/04/alu1.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	cursor: pointer;
+	transition: all .3s ease-in-out;
+	&:hover {
+		transform: scale(1.1);
+		h1 {
+			top: 42%;
+			opacity: 1;
+		}
+	}
+}
+.contact-me {
+	background-color: #eee;
+}
+.inner-contact-me {
+	position: relative;
+	margin: 0 auto;
+	max-width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Futura PT', sans-serif;
+	padding: 40px;
+	>h2 {
+		font-size: 32px;
+	}
+	>h3 {
+		font-weight: 300;
+		margin-bottom: 30px;
+	}
+}
+.button {
+	display: block;
+	margin: 0 auto;
+	width: 180px;
+	padding: 12px 24px;
+	border-radius: 24px;
+	background-color: #efc978;
+	font-size: 18px;
+	font-weight: 600;
+	color: #333;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.inner-footer {
+	li {
+		display: inline-block;
+		font-size: 12px;
+		text-decoration: none;
+		color: #eee;
+		letter-spacing: 1px;
+		padding-right: 8px;
+	}
+	position: relative;
+	margin: 0 auto;
+	max-width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Futura PT', sans-serif;
+	img {
+		display: block;
+		width: 25px;
+		text-align: center;
+		padding: 0px 5px;
+	}
+	>h3 {
+		position: relative;
+		display: inline-block;
+		max-width: 100%;
+		text-align: center;
+		padding: 0px 20px;
+		color: #888;
+		top: -12px;
+		display: none;
+	}
+}
+footer {
+	background-color: #616161;
+	padding: 50px 0px;
+}
+.copyright {
+	background-color: #4a4a4a;
+	color: white;
+	padding: 10px;
+	p {
+		text-align: center;
+		font-family: 'Lato', sans-serif;
+		font-size: 11px;
+		line-height: 26px;
+		text-transform: uppercase;
+		color: white;
+	}
+}
+@media (min-width: 760px) {
+	.main-header {
+		background: transparent;
+	}
+	#twitter {
+		display: none;
+	}
+	#instagram {
+		display: none;
+	}
+	.dropdown-menu {
+		ul {
+			background: transparent;
+			display: inline-block;
+			position: absolute;
+			top: 14px;
+			right: 5%;
+			display: inline;
+			text-align: right;
+			z-index: 100;
+			border-bottom: 0px solid white;
+			>img {
+				position: relative;
+				display: unset;
+				top: 10px;
+				right: 0px;
+				cursor: pointer;
+			}
+		}
+		li {
+			display: inline-block;
+			font-size: 13px;
+			text-decoration: none;
+			letter-spacing: 1px;
+			padding-right: 8px;
+			border-bottom: 0px solid #555;
+		}
+	}
+	li {
+		&:hover {
+			background-color: transparent;
+			color: white;
+			cursor: pointer;
+		}
+	}
+}
+@media (min-width: 320px) {
+	.main-cover {
+		background: url(http://rolfjensen.no/wp-content/uploads/2015/10/welcome_video2.gif);
+		background-size: cover;
+		background-position: 50% 50%;
+		background-image: no-repeat;
+		height: 100vh;
+		width: 100%;
+	}
+	.inner-main-cover {
+		width: calc(100% - 10%);
+		top: calc(40% - 10%);
+	}
+	.fadeup {
+		font-size: 45px;
+	}
+	.box {
+		width: calc(100% - 10%);
+		>h3 {
+			margin: 20px 0px;
+		}
+	}
+	.inner-footer {
+		>h3 {
+			display: none;
+		}
+		img {
+			width: 30px;
+		}
+	}
+}
+@media (min-width: 520px) {
+	.inner-main-cover {
+		width: calc(100% - 10%);
+	}
+	.fadeup {
+		font-size: 45px;
+	}
+}
+@media (min-width: 720px) {
+	.inner-main-cover {
+		top: 25%;
+		width: calc(100% - 30%);
+	}
+	.fadeup {
+		font-size: 70px;
+	}
+	.box {
+		width: calc(50% - 10%);
+	}
+	.one-frame {
+		height: 400px;
+	}
+	.two-frame {
+		height: 400px;
+	}
+	.copyright {
+		>p {
+			font-size: 12px;
+		}
+	}
+}
+@media (min-width: 900px) {
+	.inner-main-cover {
+		top: 40%;
+	}
+	.main-cover {
+		background: none;
+		background-size: cover;
+		background-position: 50% 50%;
+		background-image: no-repeat;
+		height: 100vh;
+		width: 100%;
+	}
+	.container-one {
+		width: calc(100% - 20%);
+		height: auto;
+	}
+	.left {
+		float: left;
+		width: 60%;
+	}
+	.right {
+		float: right;
+		width: calc(40% - 10px);
+	}
+	.left2 {
+		float: left;
+		width: 40%;
+	}
+	.right2 {
+		float: right;
+		width: calc(60% - 10px);
+	}
+	.middle {
+		margin: 0px auto;
+		margin-bottom: 10px;
+		width: calc(100% - 20%);
+	}
+	.one-frame {
+		height: 500px;
+	}
+	.two-frame {
+		height: 500px;
+	}
+}
+@media (min-width: 1200px) {
+	.box {
+		width: calc(30% - 10%);
+	}
+}
+@media (min-width: 420px) {
+	.inner-contact-me {
+		padding: 80px;
+	}
+}
+@media (min-width: 500px) {
+	.inner-footer {
+		>h3 {
+			display: none;
+		}
+		img {
+			width: 35px;
+		}
+	}
+}
+@media (min-width: 780px) {
+	.inner-footer {
+		h3 {
+			display: unset;
+			visibility: visible;
+			padding: 0px 20px;
+		}
+	}
+}
